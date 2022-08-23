@@ -1,0 +1,128 @@
+body {
+  font-family: serif;
+  font-family: 'Lato', sans-serif;
+  color: #212529; }
+
+.font-lato {
+  font-family: 'Lato', sans-serif; }
+
+.font-roboto {
+  font-family: 'Roboto Mono', monospace; }
+
+a {
+  text-decoration: none;
+  color: #212529; }
+
+p {
+  margin: 0 !important; }
+
+.line-light-sm {
+  line-height: 0.58; }
+
+.line-light-md {
+  line-height: 0.6; }
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.color-primary-cus {
+  color: #198754; }
+
+.color-gray-400 {
+  color: #F8F9FA; }
+
+.color-gray-400 {
+  color: #CED4DA; }
+
+.color-gray-900 {
+  color: #212529; }
+
+.fz-ssm {
+  font-size: 12px; }
+
+.fz-sm {
+  font-size: 14px; }
+
+.fz-md {
+  font-size: 18px; }
+
+.mb-sm {
+  margin-bottom: 20px; }
+
+.mb-7 {
+  margin-bottom: 28px; }
+
+.mb-12 {
+  margin-bottom: 48px; }
+
+.mb-16 {
+  margin-bottom: 64px; }
+
+.ml-8 {
+  margin-left: 32px; }
+
+.mr-12 {
+  margin-right: 48px; }
+
+.w-23 {
+  width: 23% !important; }
+
+.w-77 {
+  width: 77% !important; }
+
+.p-8 {
+  padding: 32px; }
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.slidebar {
+  height: 100vh;
+  padding-top: 32px;
+  padding-bottom: 32px; }
+
+h1 {
+  padding-left: 32px; }
+
+.logo {
+  margin-bottom: 32px;
+  width: 151px;
+  height: 40px;
+  display: block;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week5/logo-ANSWER.svg);
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.menu-link {
+  display: block;
+  padding-left: 32px;
+  border-left: 4px solid transparent; }
+  .menu-link:hover {
+    border-left: 4px solid #198754;
+    color: #198754; }
+
+.user {
+  padding-left: 32px; }
+  .user-img {
+    margin-right: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 99rem;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.add-admin:hover {
+  color: #198754; }
+
+.search-icon:hover, .notification-icon:hover {
+  color: #198754; }
+
+.watch-icon:hover {
+  color: #198754; }
+
+/*# sourceMappingURL=all.css.map */
