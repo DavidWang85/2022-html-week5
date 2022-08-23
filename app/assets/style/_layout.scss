@@ -1,0 +1,44 @@
+.wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.slidebar{
+    height: 100vh;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+h1{
+    padding-left: 32px;
+}
+.logo{
+    margin-bottom: 32px;
+    width: 151px;
+    height: 40px;
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week5/logo-ANSWER.svg);
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden
+}
+.menu{
+    &-link{
+        display: block;
+        padding-left: 32px;
+        border-left: 4px solid transparent;
+        &:hover{
+            border-left: 4px solid $color-primary;
+            color: $color-primary;
+        } 
+    }
+}
+.user{
+    padding-left: 32px;
+    &-img{
+        margin-right: 4px;
+        width: 40px;
+        height: 40px;
+        border-radius: 99rem;
+        object-fit: cover;
+    }
+}

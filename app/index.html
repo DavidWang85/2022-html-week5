@@ -1,0 +1,490 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<div class="p-8">
+  <div class="title d-flex justify-content-between align-items-center mb-12">
+    <div class="d-flex align-items-center">
+      <h2 class="fs-4 fw-bold mr-12">Admin</h2>
+      <a class="fw-bold d-flex align-items-center add-admin" data-bs-toggle="modal" data-bs-target="#exampleScrollable" href="#">
+        <span class="material-icons color-primary-cus">add</span>Add New Admin
+      </a>
+      <!-- Add New Admin Modal -->
+      <div class="modal fade" id="exampleScrollable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title color-dark fw-bold" id="exampleModalLabel">New Admin</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h6 class="h5 w-bold">Account</h6>
+              <div class="mb-3">
+                <label for="name" class="col-form-label text-muted">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="mb-3">
+                <label for="mail" class="col-form-label text-muted">Email</label>
+                <input type="email" class="form-control" id="mail">
+              </div>
+              <div class="bg-dark my-4" style="height:1px"></div>
+              <h6 class="h5 fw-bold">Verification</h6>
+              <div class="mb-3">
+                <p class="fw-bold">
+                  <div class="mb-3">
+                    <span class="material-icons text-danger align-middle me-2 fs-6">
+                      warning
+                    </span>Unverified</p>
+                  </div>
+                  <button class="btn btn-outline-light d-block w-100 text-success">Send Verification Mail</button>
+              </div>
+              <div class="bg-light my-4" style="height:1px"></div>
+              <div class="mb-3">
+                <h6 class="h5 w-bold">Access Level</h6>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                        -Choose access level-
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>Admin</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-sm">
+                <h6 class="h5 w-bold">Custom Access</h6>
+                <div class="form-check mb-sm">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Lecture
+                  </label>
+                </div>
+                <div class="form-check mb-sm">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Coupon
+                  </label>
+                </div>
+                <div class="form-check mb-sm">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Message
+                  </label>
+                </div>
+                <div class="form-check mb-sm">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Setting
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Task Menu
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-success">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="d-flex">
+      <li><a class="search-icon" href="#"><span class="material-icons">search</span></a></li>
+      <li><a class="notification-icon" href="#"><span class="material-icons ml-8">notifications_active</span></a></li>
+    </ul>
+  </div>
+  <table class="table mb-16">
+    <thead>
+      <tr>
+        <th scope="col">ID<span class="material-icons align-middle text-success fz-md">
+          arrow_downward
+        </span></th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Verified</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="fw-light">#1</th>
+        <td>Emir Wicks</td>
+        <td>emir.wicks@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#2</th>
+        <td>Zaina Goldsmith</td>
+        <td>zaina.goldsmith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#3</th>
+        <td>Mahima Lopez</td>
+        <td>mahima.lopez@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#4</th>
+        <td>Pharrell Murray</td>
+        <td>pharrell.murray@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#5</th>
+        <td>Annika Mcbride</td>
+        <td>annika.mcbride@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#6</th>
+        <td>Fatimah Clark</td>
+        <td>fatimah.clark@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#7</th>
+        <td>Klaudia Rhodes</td>
+        <td>klaudia.rhodes@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#8</th>
+        <td>Tillie Lucero</td>
+        <td>tillie.lucero@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#9</th>
+        <td>Sabrina Stephenson</td>
+        <td>sabrina.stephenson@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="fw-light">#10</th>
+        <td>Annie Smith</td>
+        <td>annie.smith@mail.com</td>
+        <td>Yes</td>
+        <td>
+          <div class="d-flex align-items-center justify-content-end">
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#watchModal">
+              <span class="material-icons">
+                remove_red_eye
+              </span>
+            </a>
+            <a href="#" type="button" class="watch-icon" data-bs-toggle="modal" data-bs-target="#editModal">
+              <span class="material-icons ms-4">
+                edit
+              </span>
+            </a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-end">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link link-success" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link link-success" href="#">1</a></li>
+        <li class="page-item"><a class="page-link link-success" href="#">2</a></li>
+        <li class="page-item"><a class="page-link link-success" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link link-success" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- watchModal -->
+  <div class="modal fade" id="watchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-8">
+        <div class="modal-header">
+          <div class="row">
+            <div class="col-4 p-0">
+              <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week5/emir.jpeg"
+                class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-8">
+              <div class="d-flex justify-content-between mb-2">
+                <h6 class="modal-title fs-6" id="exampleModalLabel">#1</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div>Admin</div>
+              <strong class="fs-4 mb-2">Emir Wicks</strong>
+              <div>emir.wicks@mail.com</div>
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed bg-light p-0 fz-sm" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Verified
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex justify-content-between px-0">
+                      <button type="button" class="btn btn-outline-danger px-4 fw-bold">Deactivate</button>
+                      <button type="button" class="btn btn-success px-4 fw-bold">Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- editModal -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title color-dark fw-bold" id="exampleModalLabel">Edit Admin</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6 class="h5 w-bold">Account</h6>
+          <div class="mb-3">
+            <label for="name" class="col-form-label text-muted">Name</label>
+            <input type="text" class="form-control" id="name" readonly placeholder="Emir Wicks">
+          </div>
+          <div class="mb-3">
+            <label for="mail" class="col-form-label text-muted">Email</label>
+            <input type="email" class="form-control" id="mail" readonly placeholder="emir.wicks@mail.com">
+          </div>
+          <div class="bg-dark my-4" style="height:1px"></div>
+          <h6 class="h5 fw-bold">Verification</h6>
+          <div class="mb-3">
+            <div class="mb-3 d-flex justify-content-between">
+              <div>
+                <span class="material-icons text-success align-middle me-2 fs-6">
+                  check_circle
+                </span>
+                Verified
+              </div>
+              <p class="fz-sm">2020/4/12</p>
+            </div>
+            <button class="btn btn-outline-dark d-block w-100" disabled>Send Verification Mail</button>
+          </div>
+          <div class="bg-light my-4" style="height:1px"></div>
+          <div class="mb-3">
+            <h6 class="h5 w-bold">Access Level</h6>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Admin
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Admin</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <h6 class="h5 w-bold">Custom Access</h6>
+            <div class="form-check mb-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Lecture
+              </label>
+            </div>
+            <div class="form-check mb-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Coupon
+              </label>
+            </div>
+            <div class="form-check mb-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Message
+              </label>
+            </div>
+            <div class="form-check mb-sm">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Setting
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Task Menu
+              </label>
+            </div>
+          </div>
+          <div class="mb-sm">
+            <h6 class="h5 w-bold">Deactivate Account</h6>
+            <div class="mb-3">
+              <p class="text-danger">
+                <span class="material-icons text-danger align-middle me-2 fs-6">
+                  warning
+                </span>
+                This cannot be undone!
+              </p>
+            </div>
+            <button class="btn btn-outline-danger d-block w-100">Deactivate This Account</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-success">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
